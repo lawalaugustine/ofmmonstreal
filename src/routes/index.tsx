@@ -26,9 +26,8 @@ export const Route = createFileRoute("/")({
 
 const slides = [
   { src: "/event1.jpg" },
-  { src: "/event2.jpg" },
-  { src: "/event3.jpg" },
   { src: "/event4.png", badge: "Past Event" },
+  { src: "/event3.jpg" },
 ];
 
 function Index() {
@@ -189,7 +188,7 @@ const weeklyServices = [
     icon: Calendar,
     title: "Sunday Service",
     text: "Every Sunday • 10:00 AM - 12:00 PM",
-    img: "/members/001113.jpg",
+    img: "/001113.jpg",
   },
   {
     icon: Sparkles,
@@ -201,7 +200,7 @@ const weeklyServices = [
     icon: Flame,
     title: "Solution Service",
     text: "Every Friday • 7:00 PM - 8:00 PM",
-    img: "/event4.png",
+    img: "/pastor/002.jpg",
   },
   {
     icon: Users,
@@ -434,7 +433,7 @@ function CallToAction() {
           We'd love to hear from you
         </h2>
         <p className="text-white/85 max-w-2xl mx-auto mb-10 text-lg">
-          Whether you're new to our parish, have questions about services, or need directions —
+          Whether you're new to our Church, have questions about services, or need directions —
           we're here to help.
         </p>
         <div className="flex flex-wrap gap-4 justify-center">

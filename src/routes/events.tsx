@@ -51,7 +51,7 @@ const events = [
     schedule: "Every 1st - 3rd of the month",
     time: "8:00 AM - 4:00 PM",
     desc: "Our monthly life in the Spirit fasting program.",
-    img: "/event2.jpg",
+    img: "/0002.jpg",
     loc: "OFM Montreal",
     badge: "Program",
   },
@@ -65,6 +65,19 @@ const events = [
     img: "/event3.jpg",
     loc: "Prayer Line",
     badge: "Program",
+  },
+  {
+    title: "Donations",
+    dateLabel: "Give",
+    year: "2026",
+    schedule: "Available Anytime",
+    time: "24/7",
+    desc: "Support the work of ministry through Interact Transfer to omegafireministries06@gmail.com.",
+    img: "/donation.jpg",
+    loc: "Online Giving",
+    badge: "Program",
+    href: "/donate",
+    ctaLabel: "Give Now",
   },
   {
     title: "Omega Women Prayer Fellowship",
@@ -95,7 +108,7 @@ const events = [
     schedule: "Friday, March 6th 2026",
     time: "All Night",
     desc: "An all-night prophetic gathering with the manifestation of God's voice.",
-    img: "/event4.png",
+    img: "/pastor/002.jpg",
     loc: "OFM Montreal",
     badge: "Past Event",
   },
@@ -164,6 +177,13 @@ function EventsPage() {
                     className="w-full bg-gradient-gold text-gold-foreground font-semibold py-2.5 rounded-full inline-flex items-center justify-center gap-2 hover:scale-[1.02] transition-transform cursor-pointer"
                   >
                     <Calendar className="w-4 h-4" /> Register Now
+                  </a>
+                ) : "href" in e && e.href ? (
+                  <a
+                    href={e.href}
+                    className="w-full bg-gradient-gold text-gold-foreground font-semibold py-2.5 rounded-full inline-flex items-center justify-center gap-2 hover:scale-[1.02] transition-transform cursor-pointer"
+                  >
+                    <Calendar className="w-4 h-4" /> {"ctaLabel" in e ? e.ctaLabel : "Learn More"}
                   </a>
                 ) : (
                   <div className="w-full py-2.5 rounded-full border border-border text-center text-sm font-medium text-foreground/70">
