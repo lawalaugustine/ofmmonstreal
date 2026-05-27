@@ -7,13 +7,39 @@
 import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 import { loadSmtpEnvPlugin } from "./src/vite-plugins/load-smtp-env";
 
+const namecheapBuild = process.env.NAMECHEAP_BUILD === "1";
+
 // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
 // @cloudflare/vite-plugin builds from this — wrangler.jsonc main alone is insufficient.
 export default defineConfig({
+  // Static hosting (Namecheap/cPanel): no Cloudflare worker bundle
+  cloudflare: namecheapBuild ? false : undefined,
   tanstackStart: {
     server: { entry: "server" },
+    ...(namecheapBuild
+      ? {
+          prerender: {
+            enabled: true,
+            crawlLinks: true,
+            autoStaticPathsDiscovery: true,
+            failOnError: true,
+            filter: (page: { path: string }) =>
+              !page.path.startsWith("/api") && !page.path.includes("sitemap"),
+          },
+        }
+      : {}),
   },
   vite: {
     plugins: [loadSmtpEnvPlugin()],
+    server: {
+      // Proxy contact form to XAMPP Apache when testing with `npm run dev`
+      proxy: {
+        "/api/contact.php": {
+          target: "http://localhost",
+          changeOrigin: true,
+          rewrite: () => "/ofmmonstreal/public/api/contact.php",
+        },
+      },
+    },
   },
 });

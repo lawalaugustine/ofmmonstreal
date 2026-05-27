@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import {
-  PlayCircle, Calendar, ArrowRight, Sparkles, Flame, Heart, Users,
+  PlayCircle, Calendar, ArrowRight, Sparkles, Flame, Users,
 } from "lucide-react";
 import Layout from "@/components/site/Layout";
 import FlashNews from "@/components/site/FlashNews";
@@ -184,21 +184,30 @@ function About() {
   );
 }
 
-const worshipCards = [
+const weeklyServices = [
   {
     icon: Calendar,
-    title: "Life in the Spirit Fasting",
-    text: "Our monthly life in the Spirit fasting program holds every 1st - 3rd of the month, from 8:00am - 4:00pm.",
+    title: "Sunday Service",
+    text: "Every Sunday • 10:00 AM - 12:00 PM",
+    img: "/members/001113.jpg",
   },
   {
-    icon: Heart,
-    title: "OFM Montreal Prayer Line",
-    text: "OFM Montreal chapter Canada prayer line holds every Monday of the week, from 7:00pm - 8:00pm.",
+    icon: Sparkles,
+    title: "Bible Studies (Word Encounter Service)",
+    text: "Every Tuesday • 7:00 PM - 8:00 PM",
+    img: "/event3.jpg",
+  },
+  {
+    icon: Flame,
+    title: "Solution Service",
+    text: "Every Friday • 7:00 PM - 8:00 PM",
+    img: "/event4.png",
   },
   {
     icon: Users,
-    title: "Omega Women Prayer Fellowship",
-    text: "Omega Women prayer fellowship holds every last Saturday of the month, from 9:00am - 10:00am.",
+    title: "One Hour Prayer Marathon",
+    text: "Every Monday • 7:00 PM - 8:00 PM",
+    img: "/event5.jpeg",
   },
 ];
 
@@ -206,21 +215,32 @@ function Motto() {
   return (
     <section className="py-24 bg-background">
       <div className="container mx-auto px-4 lg:px-8 text-center">
-        <span className="font-serif-cap text-xs text-gold tracking-[0.2em]">Gather With Us</span>
+        <span className="font-serif-cap text-xs text-gold tracking-[0.2em]">Worship Schedule</span>
         <h2 className="font-display text-4xl md:text-5xl text-primary mt-3 mb-14">
-          Join Us in Worship
+          Weekly Services
         </h2>
-        <div className="grid md:grid-cols-3 gap-6">
-          {worshipCards.map(({ icon: Icon, title, text }) => (
+        <div className="grid md:grid-cols-4 gap-6">
+          {weeklyServices.map(({ icon: Icon, title, text, img }) => (
             <article
               key={title}
-              className="group p-8 bg-cream rounded-2xl border border-border hover:border-gold hover:-translate-y-1 transition-all duration-300 shadow-sm hover:shadow-elegant text-left"
+              className="group overflow-hidden bg-cream rounded-2xl border border-border hover:border-gold hover:-translate-y-1 transition-all duration-300 shadow-sm hover:shadow-elegant text-left"
             >
-              <span className="grid place-items-center w-14 h-14 rounded-2xl bg-gradient-royal mb-6 group-hover:bg-gradient-gold transition-all">
-                <Icon className="w-7 h-7 text-gold group-hover:text-gold-foreground" />
-              </span>
-              <h3 className="font-display text-2xl text-primary mb-3">{title}</h3>
-              <p className="text-foreground/75 leading-relaxed">{text}</p>
+              <div className="relative h-52 overflow-hidden">
+                <img
+                  src={img}
+                  alt={title}
+                  loading="lazy"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/70 to-transparent" />
+              </div>
+              <div className="p-8">
+                <span className="grid place-items-center w-14 h-14 rounded-2xl bg-gradient-royal mb-6 group-hover:bg-gradient-gold transition-all">
+                  <Icon className="w-7 h-7 text-gold group-hover:text-gold-foreground" />
+                </span>
+                <h3 className="font-display text-2xl text-primary mb-3">{title}</h3>
+                <p className="text-foreground/75 leading-relaxed">{text}</p>
+              </div>
             </article>
           ))}
         </div>
@@ -231,56 +251,24 @@ function Motto() {
 
 const events = [
   {
-    title: "Monstreal Outpouring 2026",
+    title: "MONTREAL OUTPOURING 2026",
     date: "June 16th - 17th, 2026 • 09:00 AM & 05:00 PM Daily",
     desc: "Join us for a powerful outpouring of the Spirit in Montreal.",
     img: "/event1.jpg",
-    icon: Heart,
     showRegistration: true,
   },
-  {
-    title: "One Hour Prayer Marathon",
-    date: "Every Monday - 07:00PM Prompt",
-    desc: "Come prepared and ready to be blessed",
-    img: "/event5.jpeg",
-    icon: Flame,
-  },
-  {
-    title: "Solution Service",
-    date: "Friday, March 6th 2026",
-    desc: "An all-night prophetic gathering with the manifestation of God's voice.",
-    img: "/event4.png",
-    badge: "Past Event",
-    icon: Sparkles,
-  },
 ];
+const OUTPOURING_REGISTRATION_URL = "https://montreal-outpouring.netlify.app/";
 
 function Events() {
-  const [registerOpen, setRegisterOpen] = useState(false);
-
   return (
     <section className="py-24 bg-cream">
-      <Dialog open={registerOpen} onOpenChange={setRegisterOpen}>
-        <DialogContent className="w-auto max-w-[min(calc(100vw-2rem),300px)] gap-0 border-0 p-4 sm:p-5">
-          <DialogTitle className="sr-only">
-            Register for Monstreal Outpouring 2026
-          </DialogTitle>
-          <div className="flex justify-center bg-white rounded-lg p-2">
-            <img
-              src="/scan.png"
-              alt="Monstreal Outpouring 2026 registration scan code"
-              className="mx-auto h-auto max-h-[min(65vh,360px)] w-auto max-w-[260px] object-contain"
-            />
-          </div>
-        </DialogContent>
-      </Dialog>
-
       <div className="container mx-auto px-4 lg:px-8">
         <div className="text-center mb-14">
           <span className="font-serif-cap text-xs text-gold tracking-[0.2em]">What's Happening</span>
           <h2 className="font-display text-4xl md:text-5xl text-primary mt-3">Upcoming Events</h2>
         </div>
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-1 gap-8 max-w-xl mx-auto">
           {events.map((e) => (
             <article
               key={e.title}
@@ -294,14 +282,8 @@ function Events() {
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent" />
-                <span
-                  className={`absolute top-4 left-4 inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold ${
-                    e.badge === "Past Event"
-                      ? "bg-charcoal/90 text-white"
-                      : "bg-gold text-gold-foreground"
-                  }`}
-                >
-                  <Calendar className="w-3.5 h-3.5" /> {e.badge ?? "Event"}
+                <span className="absolute top-4 left-4 inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-gold text-gold-foreground">
+                  <Calendar className="w-3.5 h-3.5" /> Event
                 </span>
               </div>
               <div className="p-7">
@@ -311,13 +293,14 @@ function Events() {
                 <h3 className="font-display text-2xl text-primary mb-3">{e.title}</h3>
                 <p className="text-foreground/75 text-sm mb-5 leading-relaxed">{e.desc}</p>
                 {"showRegistration" in e && e.showRegistration ? (
-                  <button
-                    type="button"
-                    onClick={() => setRegisterOpen(true)}
+                  <a
+                    href={OUTPOURING_REGISTRATION_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 text-primary font-semibold hover:gap-3 transition-all cursor-pointer"
                   >
                     Register Now <ArrowRight className="w-4 h-4" />
-                  </button>
+                  </a>
                 ) : (
                   <Link
                     to="/events"

@@ -3,6 +3,7 @@ import { Megaphone } from "lucide-react";
 import { CHURCH_EMAIL, CHURCH_PHONE_DISPLAY } from "@/lib/site";
 
 const ANNOUNCEMENTS = [
+  "MONTREAL OUTPOURING 2026 - June 16th & 17th With Apostle Johnson Suleman @ Plaza Le Rizz",
   "Please for those willing or interested in joining various departments, kindly meet with our father in the house (Pastor David).",
   "Please visit our library at the bookstand, buy and enrich yourself mightily, also remember to bless someone with it.",
   "Omega Women prayer fellowship holds every last Saturday of the month, from 9:00am - 10:00am.",

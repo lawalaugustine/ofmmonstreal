@@ -12,6 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as EventsRouteImport } from './routes/events'
 import { Route as DonateRouteImport } from './routes/donate'
+import { Route as DepartmentsRouteImport } from './routes/departments'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
@@ -34,6 +35,11 @@ const EventsRoute = EventsRouteImport.update({
 const DonateRoute = DonateRouteImport.update({
   id: '/donate',
   path: '/donate',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DepartmentsRoute = DepartmentsRouteImport.update({
+  id: '/departments',
+  path: '/departments',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ContactRoute = ContactRouteImport.update({
@@ -81,6 +87,7 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
+  '/departments': typeof DepartmentsRoute
   '/donate': typeof DonateRoute
   '/events': typeof EventsRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
@@ -94,6 +101,7 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
+  '/departments': typeof DepartmentsRoute
   '/donate': typeof DonateRoute
   '/events': typeof EventsRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
@@ -108,6 +116,7 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
+  '/departments': typeof DepartmentsRoute
   '/donate': typeof DonateRoute
   '/events': typeof EventsRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
@@ -123,6 +132,7 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/contact'
+    | '/departments'
     | '/donate'
     | '/events'
     | '/sitemap.xml'
@@ -136,6 +146,7 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/contact'
+    | '/departments'
     | '/donate'
     | '/events'
     | '/sitemap.xml'
@@ -149,6 +160,7 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/contact'
+    | '/departments'
     | '/donate'
     | '/events'
     | '/sitemap.xml'
@@ -163,6 +175,7 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
   ContactRoute: typeof ContactRoute
+  DepartmentsRoute: typeof DepartmentsRoute
   DonateRoute: typeof DonateRoute
   EventsRoute: typeof EventsRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
@@ -194,6 +207,13 @@ declare module '@tanstack/react-router' {
       path: '/donate'
       fullPath: '/donate'
       preLoaderRoute: typeof DonateRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/departments': {
+      id: '/departments'
+      path: '/departments'
+      fullPath: '/departments'
+      preLoaderRoute: typeof DepartmentsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/contact': {
@@ -259,6 +279,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
   ContactRoute: ContactRoute,
+  DepartmentsRoute: DepartmentsRoute,
   DonateRoute: DonateRoute,
   EventsRoute: EventsRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,

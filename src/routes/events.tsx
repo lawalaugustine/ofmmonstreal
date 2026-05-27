@@ -1,8 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useState } from "react";
 import Layout from "@/components/site/Layout";
 import PageHeader from "@/components/site/PageHeader";
-import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
 import { Calendar, Clock, MapPin } from "lucide-react";
 
 export const Route = createFileRoute("/events")({
@@ -102,10 +100,9 @@ const events = [
     badge: "Past Event",
   },
 ];
+const OUTPOURING_REGISTRATION_URL = "https://montreal-outpouring.netlify.app/";
 
 function EventsPage() {
-  const [registerOpen, setRegisterOpen] = useState(false);
-
   return (
     <Layout>
       <PageHeader
@@ -115,21 +112,6 @@ function EventsPage() {
       />
 
       <section className="py-16 container mx-auto px-4 lg:px-8">
-        <Dialog open={registerOpen} onOpenChange={setRegisterOpen}>
-          <DialogContent className="w-auto max-w-[min(calc(100vw-2rem),300px)] gap-0 border-0 p-4 sm:p-5">
-            <DialogTitle className="sr-only">
-              Register for Monstreal Outpouring 2026
-            </DialogTitle>
-            <div className="flex justify-center bg-white rounded-lg p-2">
-              <img
-                src="/scan.png"
-                alt="Monstreal Outpouring 2026 registration scan code"
-                className="mx-auto h-auto max-h-[min(65vh,360px)] w-auto max-w-[260px] object-contain"
-              />
-            </div>
-          </DialogContent>
-        </Dialog>
-
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {events.map((e) => (
             <article
@@ -175,13 +157,14 @@ function EventsPage() {
                   </li>
                 </ul>
                 {"showRegistration" in e && e.showRegistration ? (
-                  <button
-                    type="button"
-                    onClick={() => setRegisterOpen(true)}
+                  <a
+                    href={OUTPOURING_REGISTRATION_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="w-full bg-gradient-gold text-gold-foreground font-semibold py-2.5 rounded-full inline-flex items-center justify-center gap-2 hover:scale-[1.02] transition-transform cursor-pointer"
                   >
                     <Calendar className="w-4 h-4" /> Register Now
-                  </button>
+                  </a>
                 ) : (
                   <div className="w-full py-2.5 rounded-full border border-border text-center text-sm font-medium text-foreground/70">
                     {e.badge === "Past Event" ? "Event Completed" : "Join Us"}

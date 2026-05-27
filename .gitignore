@@ -20,6 +20,13 @@ dist-ssr
 .wrangler/
 .dev.vars
 
+# PHP contact form (copy from config.example.php)
+public/api/config.php
+
+# Namecheap deploy output
+deploy/namecheap-upload/
+deploy/ofm-montreal-site.zip
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

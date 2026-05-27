@@ -1,7 +1,8 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import Layout from "@/components/site/Layout";
 import PageHeader from "@/components/site/PageHeader";
-import { Heart, CreditCard, Building2, Sparkles } from "lucide-react";
+import { Heart, Sparkles, Send, Mail } from "lucide-react";
+import { CHURCH_EMAIL } from "@/lib/site";
 
 export const Route = createFileRoute("/donate")({
   head: () => ({
@@ -15,8 +16,6 @@ export const Route = createFileRoute("/donate")({
   component: DonatePage,
 });
 
-const amounts = [25, 50, 100, 250, 500, 1000];
-
 function DonatePage() {
   return (
     <Layout>
@@ -29,23 +28,48 @@ function DonatePage() {
       <section className="py-16 container mx-auto px-4 lg:px-8 grid lg:grid-cols-5 gap-10">
         <div className="lg:col-span-3 p-8 bg-cream rounded-2xl border border-border">
           <Heart className="w-8 h-8 text-gold mb-3" />
-          <h2 className="font-display text-3xl text-primary mb-2">Choose an Amount</h2>
-          <p className="text-foreground/75 mb-6">Every gift, big or small, makes a kingdom impact.</p>
-          <div className="grid grid-cols-3 gap-3 mb-6">
-            {amounts.map((a) => (
-              <button key={a} className="py-4 rounded-xl border border-border bg-background hover:border-gold hover:bg-gold/10 font-display text-xl text-primary transition-colors">
-                ${a}
-              </button>
-            ))}
+          <h2 className="font-display text-3xl text-primary mb-2">Give Today</h2>
+          <p className="text-foreground/75 mb-6 leading-relaxed">
+            Thank you for partnering with Omega Fire Ministry Montreal. At this time, gifts can
+            be sent by Interact Transfer.
+          </p>
+
+          <div className="rounded-2xl border-2 border-gold/40 bg-background p-6 sm:p-8">
+            <div className="flex items-start gap-4">
+              <span className="grid place-items-center h-12 w-12 shrink-0 rounded-xl bg-gradient-royal">
+                <Send className="h-6 w-6 text-gold" />
+              </span>
+              <div className="min-w-0">
+                <h3 className="font-display text-xl text-primary mb-1">Interact Transfer</h3>
+                <p className="text-sm text-foreground/75 mb-4">
+                  Send your offering, tithe, or seed to:
+                </p>
+                <a
+                  href={`mailto:${CHURCH_EMAIL}`}
+                  className="inline-flex items-center gap-2 break-all font-medium text-primary hover:text-gold transition-colors"
+                >
+                  <Mail className="h-4 w-4 shrink-0 text-gold" />
+                  {CHURCH_EMAIL}
+                </a>
+              </div>
+            </div>
           </div>
-          <input
-            type="number"
-            placeholder="Other amount"
-            className="w-full px-4 py-3 rounded-xl border border-border bg-background focus:outline-none focus:border-gold mb-5"
-          />
-          <button className="w-full inline-flex justify-center items-center gap-2 bg-gradient-gold text-gold-foreground font-semibold py-3.5 rounded-full shadow-gold hover:scale-[1.02] transition-transform">
-            <CreditCard className="w-5 h-5" /> Donate Securely
-          </button>
+
+          <ol className="mt-6 space-y-2 text-sm text-foreground/80 list-decimal list-inside">
+            <li>Open your banking app and choose Interact Transfer.</li>
+            <li>Send to the email address above.</li>
+            <li>
+              In the message, you may note the purpose (e.g. tithe, offering, vow, or project).
+            </li>
+          </ol>
+
+          <p className="mt-6 text-sm text-muted-foreground border-t border-border pt-5">
+            Additional giving options will be introduced later. For questions, visit our{" "}
+            <Link to="/contact" className="text-primary font-medium hover:text-gold transition-colors">
+              contact page
+            </Link>
+            .
+          </p>
         </div>
 
         <div className="lg:col-span-2 space-y-5">
@@ -58,11 +82,12 @@ function DonatePage() {
             </p>
           </div>
           <div className="p-7 bg-cream rounded-2xl border border-border">
-            <Building2 className="w-7 h-7 text-gold mb-3" />
-            <h3 className="font-display text-xl text-primary mb-2">Bank Transfer</h3>
-            <p className="text-sm text-foreground/75">
-              For bank transfer details, please contact the church office.
+            <h3 className="font-display text-xl text-primary mb-2">Scripture</h3>
+            <p className="text-sm text-foreground/75 italic leading-relaxed">
+              &ldquo;Give, and it will be given to you. A good measure, pressed down, shaken
+              together and running over, will be poured into your lap.&rdquo;
             </p>
+            <p className="text-xs text-gold mt-2 font-serif-cap">— Luke 6:38</p>
           </div>
         </div>
       </section>
