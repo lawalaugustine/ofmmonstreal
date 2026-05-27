@@ -1,0 +1,9 @@
+# Copy to .dev.vars for local development (never commit .dev.vars)
+SMTP_HOST=ofmmontreal.com
+SMTP_PORT=465
+SMTP_USER=info@ofmmontreal.com
+# Use quotes if the password contains # or other special characters
+SMTP_PASSWORD='your-smtp-password-here'
+SMTP_FROM_NAME=OFM Monstreal
+SMTP_FROM_EMAIL=info@ofmmontreal.com
+CONTACT_TO=omegafireministries06@gmail.com,info@ofmmontreal.com

@@ -1,0 +1,145 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-gold: var(--gold);
+  --color-gold-foreground: var(--gold-foreground);
+  --color-cream: var(--cream);
+  --color-charcoal: var(--charcoal);
+
+  --font-display: "Playfair Display", "Cinzel", serif;
+  --font-serif: "Cinzel", "Playfair Display", serif;
+  --font-sans: "Poppins", "Open Sans", system-ui, sans-serif;
+}
+
+:root {
+  --radius: 0.625rem;
+  /* Brand */
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.18 0.01 280);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.18 0.01 280);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.18 0.01 280);
+
+  /* Deep Royal Purple #4B1E6D */
+  --primary: oklch(0.32 0.13 305);
+  --primary-foreground: oklch(0.98 0.01 80);
+
+  --secondary: oklch(0.97 0.005 80);
+  --secondary-foreground: oklch(0.32 0.13 305);
+
+  --muted: oklch(0.96 0.01 80);
+  --muted-foreground: oklch(0.45 0.02 280);
+
+  --accent: oklch(0.95 0.02 80);
+  --accent-foreground: oklch(0.32 0.13 305);
+
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.984 0.003 247.858);
+
+  --border: oklch(0.91 0.01 280);
+  --input: oklch(0.91 0.01 280);
+  --ring: oklch(0.32 0.13 305);
+
+  /* Gold Accent #D4AF37 */
+  --gold: oklch(0.78 0.13 85);
+  --gold-foreground: oklch(0.2 0.05 305);
+
+  /* Soft Cream #F8F5F0 */
+  --cream: oklch(0.97 0.01 80);
+
+  /* Dark Charcoal #1E1E1E */
+  --charcoal: oklch(0.2 0 0);
+
+  --gradient-royal: linear-gradient(135deg, oklch(0.32 0.13 305), oklch(0.22 0.1 305));
+  --gradient-gold: linear-gradient(135deg, oklch(0.82 0.13 88), oklch(0.72 0.14 80));
+  --shadow-elegant: 0 20px 50px -20px color-mix(in oklab, oklch(0.32 0.13 305) 35%, transparent);
+  --shadow-gold: 0 10px 30px -10px color-mix(in oklab, oklch(0.78 0.13 85) 55%, transparent);
+}
+
+@layer base {
+  * { border-color: var(--color-border); }
+  html { scroll-behavior: smooth; }
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+  }
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    letter-spacing: -0.01em;
+  }
+  .font-serif-cap {
+    font-family: var(--font-serif);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+}
+
+@layer utilities {
+  .bg-gradient-royal { background-image: var(--gradient-royal); }
+  .bg-gradient-gold { background-image: var(--gradient-gold); }
+  .text-gradient-gold {
+    background: var(--gradient-gold);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .shadow-elegant { box-shadow: var(--shadow-elegant); }
+  .shadow-gold { box-shadow: var(--shadow-gold); }
+
+  .hero-overlay {
+    background: linear-gradient(
+      120deg,
+      color-mix(in oklab, oklch(0.18 0.1 305) 80%, transparent),
+      color-mix(in oklab, oklch(0.1 0.05 305) 60%, transparent)
+    );
+  }
+
+  .hero-slider-backdrop {
+    z-index: 0;
+  }
+
+  .hero-content-layer {
+    z-index: 20;
+    pointer-events: none;
+  }
+
+  .hero-content-layer .hero-content-box,
+  .hero-content-layer button {
+    pointer-events: auto;
+  }
+}
+
+@keyframes fade-in-up {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-in-up { animation: fade-in-up 0.8s ease-out both; }
