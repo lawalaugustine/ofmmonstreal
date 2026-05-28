@@ -26,7 +26,7 @@ export const Route = createFileRoute("/")({
 
 const slides = [
   { src: "/event1.jpg" },
-  { src: "/event4.png", badge: "Past Event" },
+  { src: "/event4.png"},
   { src: "/event3.jpg" },
 ];
 
@@ -187,19 +187,19 @@ const weeklyServices = [
   {
     icon: Calendar,
     title: "Sunday Service",
-    text: "Every Sunday • 10:00 AM - 12:00 PM",
+    text: "Every Sunday • 10AM - 12PM",
     img: "/001113.jpg",
   },
   {
     icon: Sparkles,
-    title: "Bible Studies (Word Encounter Service)",
-    text: "Every Tuesday • 7:00 PM - 8:00 PM",
+    title: "Wednesday Word Encounter",
+    text: "Every Wednesday • 7PM - 8PM",
     img: "/event3.jpg",
   },
   {
     icon: Flame,
-    title: "Solution Service",
-    text: "Every Friday • 7:00 PM - 8:00 PM",
+    title: "Friday Solution Service",
+    text: "Every Friday • 7PM - 8PM",
     img: "/pastor/002.jpg",
   },
   {
@@ -326,7 +326,7 @@ const sermons = [
   },
   {
     title: "Deliverance & Recovery Service Conference Day",
-    by: "Pastor David Edegbe",
+    by: "Pastor Courage Imolore",
     date: "",
     videoId: "WJDDbqO_iCw",
   },

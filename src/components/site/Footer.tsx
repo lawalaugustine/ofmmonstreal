@@ -2,9 +2,9 @@ import { Link } from "@tanstack/react-router";
 import { Facebook, Instagram, MapPin, Mail, Phone } from "lucide-react";
 import {
   CHURCH_EMAIL,
-  CHURCH_EMAIL_OFFICE,
   CHURCH_PHONE_DISPLAY,
   CHURCH_PHONE_TEL,
+  SERVICE_TIMES,
 } from "@/lib/site";
 
 export default function Footer() {
@@ -59,18 +59,12 @@ export default function Footer() {
         <div>
           <h4 className="font-serif-cap text-gold text-sm mb-5">Service Times</h4>
           <ul className="space-y-3 text-sm">
-            <li>
-              <span className="block font-medium text-white">Sunday Worship</span>
-              <span className="text-[oklch(0.78_0.01_80)]">10:00 AM – 12:30 PM</span>
-            </li>
-            <li>
-              <span className="block font-medium text-white">Wednesday Bible Study</span>
-              <span className="text-[oklch(0.78_0.01_80)]">7:00 PM – 8:30 PM</span>
-            </li>
-            <li>
-              <span className="block font-medium text-white">Friday Deliverance</span>
-              <span className="text-[oklch(0.78_0.01_80)]">7:00 PM – 9:00 PM</span>
-            </li>
+            {SERVICE_TIMES.map((item) => (
+              <li key={item.title}>
+                <span className="block font-medium text-white">{item.title}</span>
+                <span className="text-[oklch(0.78_0.01_80)]">{item.time}</span>
+              </li>
+            ))}
           </ul>
         </div>
 
@@ -83,14 +77,9 @@ export default function Footer() {
             </li>
             <li className="flex gap-3">
               <Mail className="w-4 h-4 text-gold flex-shrink-0 mt-0.5" />
-              <div className="space-y-1">
-                <a href={`mailto:${CHURCH_EMAIL}`} className="block hover:text-gold">
-                  {CHURCH_EMAIL}
-                </a>
-                <a href={`mailto:${CHURCH_EMAIL_OFFICE}`} className="block hover:text-gold">
-                  {CHURCH_EMAIL_OFFICE}
-                </a>
-              </div>
+              <a href={`mailto:${CHURCH_EMAIL}`} className="hover:text-gold">
+                {CHURCH_EMAIL}
+              </a>
             </li>
             <li className="flex gap-3">
               <Phone className="w-4 h-4 text-gold flex-shrink-0 mt-0.5" />

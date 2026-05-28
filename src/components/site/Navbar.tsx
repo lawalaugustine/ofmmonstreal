@@ -5,18 +5,6 @@ import { Menu, X, ChevronDown } from "lucide-react";
 const linkClass =
   "text-sm font-medium tracking-wide text-foreground/85 hover:text-primary transition-colors";
 const activeProps = { className: "text-primary" };
-const departmentItems = [
-  { to: "/departments#men-department", label: "Men Department" },
-  { to: "/departments#women-department", label: "Women Department" },
-  { to: "/departments#youth-department", label: "Youth Department" },
-  { to: "/departments#children-department", label: "Children Department" },
-  { to: "/departments#chior-department", label: "Chior Department" },
-  { to: "/departments#intercessor-department", label: "Intercessor Department" },
-  { to: "/departments#media-department", label: "Media Department" },
-  { to: "/departments#evangelism-department", label: "Evangelism Department" },
-  { to: "/departments#sanctuary-department", label: "Sanctuary Department" },
-  { to: "/departments#ushering-protocol-department", label: "Ushering & Protocol Department" },
-];
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -61,10 +49,9 @@ export default function Navbar() {
           <Link to="/about" className={linkClass} activeProps={activeProps}>
             About
           </Link>
-          <Dropdown
-            label="Departments"
-            items={departmentItems}
-          />
+          <Link to="/departments" className={linkClass} activeProps={activeProps}>
+            Departments
+          </Link>
           <Dropdown
             label="Media"
             items={[
@@ -100,14 +87,9 @@ export default function Navbar() {
           <div className="container mx-auto px-4 py-4 flex flex-col gap-3">
             <MobileLink to="/" onClick={() => setOpen(false)}>Home</MobileLink>
             <MobileLink to="/about" onClick={() => setOpen(false)}>About</MobileLink>
-            <div className="pl-3 border-l-2 border-gold/50 flex flex-col gap-2">
-              <span className="text-xs font-serif-cap text-muted-foreground">Departments</span>
-              {departmentItems.map((item) => (
-                <MobileLink key={item.to} to={item.to} onClick={() => setOpen(false)}>
-                  {item.label}
-                </MobileLink>
-              ))}
-            </div>
+            <MobileLink to="/departments" onClick={() => setOpen(false)}>
+              Departments
+            </MobileLink>
             <div className="pl-3 border-l-2 border-gold/50 flex flex-col gap-2">
               <span className="text-xs font-serif-cap text-muted-foreground">Media</span>
               <MobileLink to="/media/sermons" onClick={() => setOpen(false)}>Sermon</MobileLink>

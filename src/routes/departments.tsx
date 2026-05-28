@@ -30,8 +30,8 @@ const departments = [
     description: "Nurturing children in the fear of God through age-appropriate teaching.",
   },
   {
-    id: "chior-department",
-    title: "Chior Department",
+    id: "choir-department",
+    title: "Choir Department",
     image: null,
     description: "Leading worship and praise with excellence and spiritual depth.",
   },

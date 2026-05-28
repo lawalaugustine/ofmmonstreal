@@ -19,18 +19,18 @@ const ORDER_OF_SERVICE = [
     icon: Sparkles,
   },
   {
-    title: "Main Service",
-    time: "10:00 AM – 12:00 PM",
+    title: "Sunday Service",
+    time: "10AM - 12PM",
     icon: CalendarClock,
   },
   {
-    title: "Tuesday Bible Studies (Encounter Service)",
-    time: "7:00 PM – 8:00 PM",
+    title: "Wednesday Word Encounter",
+    time: "7PM - 8PM",
     icon: CalendarClock,
   },
   {
     title: "Friday Solution Service",
-    time: "7:00 PM – 8:00 PM",
+    time: "7PM - 8PM",
     icon: CalendarClock,
   },
   {
@@ -40,13 +40,7 @@ const ORDER_OF_SERVICE = [
     icon: Flame,
   },
   {
-    title: "Holy Communion Service",
-    time: "Monthly",
-    note: "Every 1st Monday of the month",
-    icon: Sparkles,
-  },
-  {
-    title: "Anointing Service",
+    title: "Anointing Service / Communion Service",
     time: "Monthly",
     note: "Every 1st Sunday of the month with Papa Live",
     icon: Flame,

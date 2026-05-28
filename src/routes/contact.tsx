@@ -5,9 +5,9 @@ import PageHeader from "@/components/site/PageHeader";
 import { MapPin, Mail, Phone, Send, Clock, Facebook, Instagram, Search, Loader2 } from "lucide-react";
 import {
   CHURCH_EMAIL,
-  CHURCH_EMAIL_OFFICE,
   CHURCH_PHONE_DISPLAY,
   CHURCH_PHONE_TEL,
+  SERVICE_TIMES,
 } from "@/lib/site";
 
 const GOOGLE_SEARCH_TERMS = ["Omega Fire Ministries Montreal", "OFM Montreal"];
@@ -179,7 +179,7 @@ function ContactPage() {
             {
               icon: Mail,
               t: "Email",
-              d: `${CHURCH_EMAIL} · ${CHURCH_EMAIL_OFFICE}`,
+              d: CHURCH_EMAIL,
               href: `mailto:${CHURCH_EMAIL}`,
             },
             {
@@ -188,7 +188,11 @@ function ContactPage() {
               d: CHURCH_PHONE_DISPLAY,
               href: `tel:${CHURCH_PHONE_TEL}`,
             },
-            { icon: Clock, t: "Sunday Worship", d: "10:00 AM – 12:30 PM" },
+            ...SERVICE_TIMES.map(({ title, time }) => ({
+              icon: Clock,
+              t: title,
+              d: time,
+            })),
           ].map(({ icon: Icon, t, d, href }) => (
             <div key={t} className="flex gap-4 p-5 rounded-2xl bg-cream border border-border">
               <span className="grid place-items-center w-12 h-12 rounded-xl bg-gradient-royal shrink-0">
