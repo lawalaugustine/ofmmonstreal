@@ -10,7 +10,7 @@ export const Route = createFileRoute("/media/sermons")({
     meta: [
       { title: "Sermons — Omega Fire Ministries, Montreal" },
       { name: "description", content: "Watch & listen to the latest video and audio sermons from Omega Fire Ministries Montreal." },
-      { property: "og:title", content: "Sermons — Omega Fire Montreal" },
+      { property: "og:title", content: "Sermons — Omega Fire Ministries, Montreal" },
       { property: "og:url", content: "/media/sermons" },
     ],
     links: [{ rel: "canonical", href: "/media/sermons" }],

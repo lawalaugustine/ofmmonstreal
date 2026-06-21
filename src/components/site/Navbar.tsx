@@ -37,7 +37,7 @@ export default function Navbar() {
               Omega Fire
             </span>
             <span className="block font-display text-base font-semibold text-primary">
-              Ministry • Montreal
+              Ministries • Montreal
             </span>
           </span>
         </Link>

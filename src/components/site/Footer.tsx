@@ -25,7 +25,7 @@ export default function Footer() {
                 Omega Fire
               </span>
               <span className="block font-display text-lg font-semibold text-white group-hover:text-gold transition-colors">
-                Ministry • Montreal
+                Ministries • Montreal
               </span>
             </span>
           </Link>

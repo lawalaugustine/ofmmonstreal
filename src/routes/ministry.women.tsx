@@ -33,7 +33,7 @@ export const Route = createFileRoute("/ministry/women")({
     meta: [
       { title: "Women Ministry — Omega Fire Ministries, Montreal" },
       { name: "description", content: "Women Ministry of Omega Fire Montreal — empowerment, prayer meetings, testimonies and events." },
-      { property: "og:title", content: "Women Ministry — Omega Fire Montreal" },
+      { property: "og:title", content: "Women Ministry — Omega Fire Ministries, Montreal" },
       { property: "og:url", content: "/ministry/women" },
     ],
     links: [{ rel: "canonical", href: "/ministry/women" }],

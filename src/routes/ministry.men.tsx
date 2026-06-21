@@ -27,7 +27,7 @@ export const Route = createFileRoute("/ministry/men")({
     meta: [
       { title: "Men Ministry — Omega Fire Ministries, Montreal" },
       { name: "description", content: "The Men Ministry of Omega Fire Montreal: raising kingdom men through fellowship, discipleship and activities." },
-      { property: "og:title", content: "Men Ministry — Omega Fire Montreal" },
+      { property: "og:title", content: "Men Ministry — Omega Fire Ministries, Montreal" },
       { property: "og:url", content: "/ministry/men" },
     ],
     links: [{ rel: "canonical", href: "/ministry/men" }],

@@ -76,7 +76,7 @@ export const Route = createFileRoute("/departments")({
         content:
           "Explore all ministry departments at Omega Fire Ministries Montreal.",
       },
-      { property: "og:title", content: "Departments — Omega Fire Montreal" },
+      { property: "og:title", content: "Departments — Omega Fire Ministries, Montreal" },
       { property: "og:url", content: "/departments" },
     ],
     links: [{ rel: "canonical", href: "/departments" }],

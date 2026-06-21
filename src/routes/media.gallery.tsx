@@ -14,7 +14,7 @@ export const Route = createFileRoute("/media/gallery")({
         name: "description",
         content: "Photo gallery of OFM Montreal members, pastors, worship, and church events.",
       },
-      { property: "og:title", content: "Gallery — Omega Fire Montreal" },
+      { property: "og:title", content: "Gallery — Omega Fire Ministries, Montreal" },
       { property: "og:url", content: "/media/gallery" },
     ],
     links: [{ rel: "canonical", href: "/media/gallery" }],

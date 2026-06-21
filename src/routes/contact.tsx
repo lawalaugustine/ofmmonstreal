@@ -48,7 +48,7 @@ export const Route = createFileRoute("/contact")({
     meta: [
       { title: "Contact — Omega Fire Ministries, Montreal" },
       { name: "description", content: "Get in touch with Omega Fire Ministries Montreal. Visit us, send a message, or reach out on social media." },
-      { property: "og:title", content: "Contact — Omega Fire Montreal" },
+      { property: "og:title", content: "Contact — Omega Fire Ministries, Montreal" },
       { property: "og:url", content: "/contact" },
     ],
     links: [{ rel: "canonical", href: "/contact" }],

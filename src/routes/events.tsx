@@ -12,7 +12,7 @@ export const Route = createFileRoute("/events")({
         content:
           "Upcoming events and regular programs at Omega Fire Ministries Montreal — services, prayer, and conferences.",
       },
-      { property: "og:title", content: "Events — Omega Fire Montreal" },
+      { property: "og:title", content: "Events — Omega Fire Ministries, Montreal" },
       { property: "og:url", content: "/events" },
     ],
     links: [{ rel: "canonical", href: "/events" }],
