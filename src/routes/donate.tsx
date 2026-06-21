@@ -7,8 +7,8 @@ import { CHURCH_EMAIL } from "@/lib/site";
 export const Route = createFileRoute("/donate")({
   head: () => ({
     meta: [
-      { title: "Donate — Omega Fire Ministry, Montreal" },
-      { name: "description", content: "Partner with Omega Fire Ministry Montreal through giving and offerings." },
+      { title: "Donate — Omega Fire Ministries, Montreal" },
+      { name: "description", content: "Partner with Omega Fire Ministries Montreal through giving and offerings." },
       { property: "og:url", content: "/donate" },
     ],
     links: [{ rel: "canonical", href: "/donate" }],
@@ -30,7 +30,7 @@ function DonatePage() {
           <Heart className="w-8 h-8 text-gold mb-3" />
           <h2 className="font-display text-3xl text-primary mb-2">Give Today</h2>
           <p className="text-foreground/75 mb-6 leading-relaxed">
-            Thank you for partnering with Omega Fire Ministry Montreal. At this time, gifts can
+            Thank you for partnering with Omega Fire Ministries Montreal. At this time, gifts can
             be sent by Interact Transfer.
           </p>
 

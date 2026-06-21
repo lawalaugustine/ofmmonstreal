@@ -25,7 +25,7 @@ const menGalleryImages = [
 export const Route = createFileRoute("/ministry/men")({
   head: () => ({
     meta: [
-      { title: "Men Ministry — Omega Fire Ministry, Montreal" },
+      { title: "Men Ministry — Omega Fire Ministries, Montreal" },
       { name: "description", content: "The Men Ministry of Omega Fire Montreal: raising kingdom men through fellowship, discipleship and activities." },
       { property: "og:title", content: "Men Ministry — Omega Fire Montreal" },
       { property: "og:url", content: "/ministry/men" },

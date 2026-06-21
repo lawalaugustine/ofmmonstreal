@@ -6,13 +6,13 @@ import { BookOpen, Flame, Sparkles, Heart, Users } from "lucide-react";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About — Omega Fire Ministry, Montreal" },
+      { title: "About — Omega Fire Ministries, Montreal" },
       {
         name: "description",
         content:
           "Learn about OFM Montreal — our mission, vision, leadership, and core values.",
       },
-      { property: "og:title", content: "About — Omega Fire Ministry, Montreal" },
+      { property: "og:title", content: "About — Omega Fire Ministries, Montreal" },
       {
         property: "og:description",
         content: "OFM Montreal — multi-cultural ministry, mission, vision, and leadership.",
@@ -37,7 +37,7 @@ function AboutPage() {
         <div className="relative">
           <img
             src="/0011.jpg"
-            alt="Omega Fire Ministry Montreal"
+            alt="Omega Fire Ministries Montreal"
             loading="lazy"
             className="rounded-2xl shadow-elegant w-full h-[520px] object-cover"
           />

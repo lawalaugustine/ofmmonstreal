@@ -70,7 +70,7 @@ const departments = [
 export const Route = createFileRoute("/departments")({
   head: () => ({
     meta: [
-      { title: "Departments — Omega Fire Ministry, Montreal" },
+      { title: "Departments — Omega Fire Ministries, Montreal" },
       {
         name: "description",
         content:

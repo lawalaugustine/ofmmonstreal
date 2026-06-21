@@ -8,8 +8,8 @@ import { PlayCircle, Search } from "lucide-react";
 export const Route = createFileRoute("/media/sermons")({
   head: () => ({
     meta: [
-      { title: "Sermons — Omega Fire Ministry, Montreal" },
-      { name: "description", content: "Watch & listen to the latest video and audio sermons from Omega Fire Ministry Montreal." },
+      { title: "Sermons — Omega Fire Ministries, Montreal" },
+      { name: "description", content: "Watch & listen to the latest video and audio sermons from Omega Fire Ministries Montreal." },
       { property: "og:title", content: "Sermons — Omega Fire Montreal" },
       { property: "og:url", content: "/media/sermons" },
     ],

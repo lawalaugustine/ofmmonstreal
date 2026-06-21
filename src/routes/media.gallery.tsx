@@ -9,7 +9,7 @@ import { ZoomIn } from "lucide-react";
 export const Route = createFileRoute("/media/gallery")({
   head: () => ({
     meta: [
-      { title: "Gallery — Omega Fire Ministry, Montreal" },
+      { title: "Gallery — Omega Fire Ministries, Montreal" },
       {
         name: "description",
         content: "Photo gallery of OFM Montreal members, pastors, worship, and church events.",

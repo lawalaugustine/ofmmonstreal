@@ -46,8 +46,8 @@ function TikTokIcon({ className }: { className?: string }) {
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact — Omega Fire Ministry, Montreal" },
-      { name: "description", content: "Get in touch with Omega Fire Ministry Montreal. Visit us, send a message, or reach out on social media." },
+      { title: "Contact — Omega Fire Ministries, Montreal" },
+      { name: "description", content: "Get in touch with Omega Fire Ministries Montreal. Visit us, send a message, or reach out on social media." },
       { property: "og:title", content: "Contact — Omega Fire Montreal" },
       { property: "og:url", content: "/contact" },
     ],
@@ -240,7 +240,7 @@ function ContactPage() {
           <div className="p-5 rounded-2xl bg-cream border border-border">
             <p className="font-serif-cap text-xs text-gold mb-2">Social Media</p>
             <p className="text-sm text-foreground/80 mb-4">
-              Follow Omega Fire Ministry Montreal on:
+              Follow Omega Fire Ministries Montreal on:
             </p>
             <div className="flex flex-wrap gap-3">
               {socialLinks.map(({ label, href, Icon }) => (

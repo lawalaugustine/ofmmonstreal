@@ -128,14 +128,14 @@ export default function Footer() {
             ))}
           </div>
           <p className="text-xs text-[oklch(0.7_0.01_80)] mt-3">
-            @Omega Fire Ministry Montreal
+            @Omega Fire Ministries Montreal
           </p>
         </div>
       </div>
 
       <div className="border-t border-white/10">
         <div className="container mx-auto px-4 lg:px-8 py-5 flex flex-col md:flex-row gap-2 items-center justify-between text-xs text-[oklch(0.7_0.01_80)]">
-          <p>© {new Date().getFullYear()} Omega Fire Ministry, Montreal. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Omega Fire Ministries, Montreal. All rights reserved.</p>
           <p>Wiping away tears • Ending afflictions • Restoring destinies</p>
         </div>
       </div>

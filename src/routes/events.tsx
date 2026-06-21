@@ -6,11 +6,11 @@ import { Calendar, Clock, MapPin } from "lucide-react";
 export const Route = createFileRoute("/events")({
   head: () => ({
     meta: [
-      { title: "Events — Omega Fire Ministry, Montreal" },
+      { title: "Events — Omega Fire Ministries, Montreal" },
       {
         name: "description",
         content:
-          "Upcoming events and regular programs at Omega Fire Ministry Montreal — services, prayer, and conferences.",
+          "Upcoming events and regular programs at Omega Fire Ministries Montreal — services, prayer, and conferences.",
       },
       { property: "og:title", content: "Events — Omega Fire Montreal" },
       { property: "og:url", content: "/events" },

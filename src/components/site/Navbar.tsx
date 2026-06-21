@@ -29,7 +29,7 @@ export default function Navbar() {
         <Link to="/" className="flex items-center gap-3 group">
           <img
             src="/logo.png"
-            alt="Omega Fire Ministry Montreal"
+            alt="Omega Fire Ministries Montreal"
             className="h-12 w-12 object-contain shrink-0"
           />
           <span className="leading-tight">

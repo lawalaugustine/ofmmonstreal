@@ -1,4 +1,4 @@
-# Omega Fire Ministry Montreal — Namecheap / Apache (cPanel)
+# Omega Fire Ministries Montreal — Namecheap / Apache (cPanel)
 DirectoryIndex index.html
 
 <IfModule mod_rewrite.c>

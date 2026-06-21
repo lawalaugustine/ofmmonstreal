@@ -72,13 +72,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Omega Fire Ministry, Montreal — Wiping Tears, Ending Afflictions" },
+      { title: "Omega Fire Ministries, Montreal — Wiping Tears, Ending Afflictions" },
       {
         name: "description",
         content:
-          "Omega Fire Ministry Montreal — a house God has ordained to wipe away tears, end afflictions, and restore people to their destinies.",
+          "Omega Fire Ministries Montreal — a house God has ordained to wipe away tears, end afflictions, and restore people to their destinies.",
       },
-      { property: "og:title", content: "Omega Fire Ministry, Montreal" },
+      { property: "og:title", content: "Omega Fire Ministries, Montreal" },
       { property: "og:description", content: "A house God has ordained, to wipe away tears and affliction." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },

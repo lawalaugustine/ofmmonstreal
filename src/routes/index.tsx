@@ -13,9 +13,9 @@ import {
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Omega Fire Ministry, Montreal — Welcome Home" },
-      { name: "description", content: "Welcome to Omega Fire Ministry, Montreal. Join us for worship, deliverance and prophetic encounters." },
-      { property: "og:title", content: "Omega Fire Ministry, Montreal" },
+      { title: "Omega Fire Ministries, Montreal — Welcome Home" },
+      { name: "description", content: "Welcome to Omega Fire Ministries, Montreal. Join us for worship, deliverance and prophetic encounters." },
+      { property: "og:title", content: "Omega Fire Ministries, Montreal" },
       { property: "og:description", content: "A house God has ordained, to wipe away tears and affliction." },
       { property: "og:url", content: "/" },
     ],
@@ -88,7 +88,7 @@ function Hero() {
               <Flame className="w-3 h-3" /> Power House
             </span>
             <h1 className="font-display text-2xl sm:text-3xl md:text-4xl font-semibold leading-tight mb-3">
-              Welcome to <span className="text-gradient-gold">Omega Fire Ministry</span> Montreal
+              Welcome to <span className="text-gradient-gold">Omega Fire Ministries</span> Montreal
             </h1>
             <p className="text-sm sm:text-base text-white/85 mb-5 max-w-lg leading-relaxed">
               A house GOD has ordained, to wipe away tears and affliction.
@@ -137,7 +137,7 @@ function About() {
         <div className="relative">
           <img
             src="/017.jpg"
-            alt="Omega Fire Ministry Montreal sanctuary"
+            alt="Omega Fire Ministries Montreal sanctuary"
             loading="lazy"
             width={1200}
             height={1200}
