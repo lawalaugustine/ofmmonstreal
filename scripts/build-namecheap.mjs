@@ -16,7 +16,7 @@ const uploadDir = path.join(root, "deploy", "namecheap-upload");
 const zipPath = path.join(root, "deploy", "ofm-montreal-site.zip");
 const htaccessSrc = path.join(root, "deploy", ".htaccess");
 
-console.log("Building static site for Namecheap hosting...\n");
+console.log("Building static site for Namecheap hosting...\n"); 
 
 execSync("npx vite build", {
   cwd: root,
