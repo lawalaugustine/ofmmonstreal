@@ -126,7 +126,7 @@ try {
     $mail->CharSet = PHPMailer::CHARSET_UTF8;
 
     $fromEmail = (string) ($config['from_email'] ?? $mail->Username);
-    $fromName = (string) ($config['from_name'] ?? 'OFM Monstreal');
+    $fromName = (string) ($config['from_name'] ?? 'Omega Fire Ministries Montreal');
     $mail->setFrom($fromEmail, $fromName);
     $mail->addReplyTo($email, $name);
 

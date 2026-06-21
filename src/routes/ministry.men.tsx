@@ -26,7 +26,7 @@ export const Route = createFileRoute("/ministry/men")({
   head: () => ({
     meta: [
       { title: "Men Ministry — Omega Fire Ministries, Montreal" },
-      { name: "description", content: "The Men Ministry of Omega Fire Montreal: raising kingdom men through fellowship, discipleship and activities." },
+      { name: "description", content: "The Men Ministry of Omega Fire Ministries Montreal: raising kingdom men through fellowship, discipleship and activities." },
       { property: "og:title", content: "Men Ministry — Omega Fire Ministries, Montreal" },
       { property: "og:url", content: "/ministry/men" },
     ],
@@ -55,7 +55,7 @@ function MenMinistry() {
       <PageHeader
         title="Men Ministry"
         subtitle="Raising Kingdom men — strong in faith, bold in purpose, faithful at home."
-        crumbs={[{ label: "Ministry" }, { label: "Men Ministry" }]}
+        crumbs={[{ label: "Ministries" }, { label: "Men Ministry" }]}
       />
 
       <section className="py-20 container mx-auto px-4 lg:px-8 grid lg:grid-cols-2 gap-12 items-center">

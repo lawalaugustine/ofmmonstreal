@@ -35,7 +35,7 @@ export function getSmtpConfig(): SmtpConfig {
     port: Number(readEnv("SMTP_PORT") ?? "465"),
     user: readEnv("SMTP_USER") ?? "info@ofmmontreal.com",
     pass: required("SMTP_PASSWORD"),
-    fromName: readEnv("SMTP_FROM_NAME") ?? "OFM Monstreal",
+    fromName: readEnv("SMTP_FROM_NAME") ?? "Omega Fire Ministries Montreal",
     fromEmail: readEnv("SMTP_FROM_EMAIL") ?? "info@ofmmontreal.com",
     to: toRaw
       .split(",")

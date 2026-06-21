@@ -158,7 +158,7 @@ function About() {
             Welcome to Omega Fire Ministries
           </h2>
           <p className="text-foreground/80 mb-8 leading-relaxed">
-            OFM Montreal, is a Multi-Cultural ministry which is home to a great people
+            OFM Montreal is a multi-cultural church which is home to a great people
             experiencing great power and great grace, who are witness of the resurrection of
             Jesus Christ.
           </p>

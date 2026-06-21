@@ -8,7 +8,7 @@
     "SMTP_HOST": "ofmmontreal.com",
     "SMTP_PORT": "465",
     "SMTP_USER": "info@ofmmontreal.com",
-    "SMTP_FROM_NAME": "OFM Monstreal",
+    "SMTP_FROM_NAME": "Omega Fire Ministries Montreal",
     "SMTP_FROM_EMAIL": "info@ofmmontreal.com",
     "CONTACT_TO": "omegafireministries06@gmail.com,info@ofmmontreal.com"
   }

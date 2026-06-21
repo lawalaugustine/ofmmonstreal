@@ -22,7 +22,7 @@ export const Route = createFileRoute("/events")({
 
 const events = [
   {
-    title: "Monstreal Outpouring 2026",
+    title: "Montreal Outpouring 2026",
     dateLabel: "Jun 16–17",
     year: "2026",
     schedule: "June 16th - 17th, 2026",

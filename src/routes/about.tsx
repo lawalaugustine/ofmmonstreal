@@ -15,7 +15,7 @@ export const Route = createFileRoute("/about")({
       { property: "og:title", content: "About — Omega Fire Ministries, Montreal" },
       {
         property: "og:description",
-        content: "OFM Montreal — multi-cultural ministry, mission, vision, and leadership.",
+        content: "OFM Montreal — Omega Fire Ministries, mission, vision, and leadership.",
       },
       { property: "og:url", content: "/about" },
     ],
@@ -28,7 +28,7 @@ function AboutPage() {
   return (
     <Layout>
       <PageHeader
-        title="About Our Ministry"
+        title="About Our Ministries"
         subtitle="OFM Montreal — home to a people experiencing great power and great grace."
         crumbs={[{ label: "About" }]}
       />
@@ -55,7 +55,7 @@ function AboutPage() {
             Welcome to Omega Fire Ministries
           </h2>
           <p className="text-foreground/80 mb-8 leading-relaxed">
-            OFM Montreal, is a Multi-Cultural ministry which is home to a great people
+            OFM Montreal is a multi-cultural church which is home to a great people
             experiencing great power and great grace, who are witness of the resurrection of
             Jesus Christ.
           </p>

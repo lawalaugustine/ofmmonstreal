@@ -32,7 +32,7 @@ export const Route = createFileRoute("/ministry/women")({
   head: () => ({
     meta: [
       { title: "Women Ministry — Omega Fire Ministries, Montreal" },
-      { name: "description", content: "Women Ministry of Omega Fire Montreal — empowerment, prayer meetings, testimonies and events." },
+      { name: "description", content: "Women Ministry of Omega Fire Ministries Montreal — empowerment, prayer meetings, testimonies and events." },
       { property: "og:title", content: "Women Ministry — Omega Fire Ministries, Montreal" },
       { property: "og:url", content: "/ministry/women" },
     ],
@@ -62,7 +62,7 @@ function WomenMinistry() {
       <PageHeader
         title="Women Ministry"
         subtitle="A sisterhood of grace, power and purpose."
-        crumbs={[{ label: "Ministry" }, { label: "Women Ministry" }]}
+        crumbs={[{ label: "Ministries" }, { label: "Women Ministry" }]}
       />
 
       <section className="py-20 container mx-auto px-4 lg:px-8 grid lg:grid-cols-2 gap-12 items-center">
@@ -76,7 +76,7 @@ function WomenMinistry() {
           <Heart className="w-8 h-8 text-gold mb-4" />
           <h2 className="font-display text-4xl text-primary mb-5">Welcome to Women&apos;s Ministry</h2>
           <p className="text-foreground/80 leading-relaxed mb-4">
-            The Women&apos;s Ministry of Omega Fire Ministries Monstreal is a fellowship of women
+            The Women&apos;s Ministry of Omega Fire Ministries Montreal is a fellowship of women
             committed to growing in faith, prayer, wisdom, and purpose through the Word of God
             and the power of the Holy Spirit.
           </p>

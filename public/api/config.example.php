@@ -8,7 +8,7 @@ return [
     'smtp_port' => 465,
     'smtp_user' => 'info@ofmmontreal.com',
     'smtp_pass' => 'Terminal2026#',
-    'from_name' => 'OFM Monstreal',
+    'from_name' => 'Omega Fire Ministries Montreal',
     'from_email' => 'info@ofmmontreal.com',
     'to' => [
         'omegafireministries06@gmail.com',
